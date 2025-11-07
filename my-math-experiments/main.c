@@ -12,7 +12,6 @@ int main() {
 	system("pause");
 
 	// Example usage: 1000 low bound, 2000 up bound, 1500 threshold, 10000 repetitions
-	// Use  for tail recursion optimization
 	printf("\nPhilanthropist Experiment Results:\n");
 	philanthropist(1000, 2000, 1500, 10000);
 
