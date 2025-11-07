@@ -1,13 +1,15 @@
-// Assume we have an unfair dice with n faces and p[i] is the probability of face i.
-// Toss the dice for n times, if all the results are different, return the last result; otherwise, repeat.
-// 
-// Math proof:
-// P(res[i]) = p[i]
-// P(res[i] | diff) = P(diff | res[i]) * P(res[i]) / P(diff)
-// P(diff | res[i]) = A(n - 1, n - 1) * ¦°(j <= n, j != i) p[j]
-// P(diff} = A(n, n) * ¦°(j <= n) p[j]
-// P(res[i] | diff) = { A(n - 1, n - 1) * ¦°(j <= n, j != i) p[j] * p[i] } / { A(n, n) * ¦°(j <= n) p[j] }
-// P(res[i] | diff) = 1 / n
+/** 
+* Assume we have an unfair dice with n faces and p[i] is the probability of face i.
+* Toss the dice for n times, if all the results are different, return the last result; otherwise, repeat.
+*
+* Math proof:
+* P(res[i]) = p[i]
+* P(res[i] | diff) = P(diff | res[i]) * P(res[i]) / P(diff)
+* P(diff | res[i]) = A(n - 1, n - 1) * ¦°(j <= n, j != i) p[j]
+* P(diff} = A(n, n) * ¦°(j <= n) p[j]
+* P(res[i] | diff) = { A(n - 1, n - 1) * ¦°(j <= n, j != i) p[j] * p[i] } / { A(n, n) * ¦°(j <= n) p[j] }
+* P(res[i] | diff) = 1 / n
+**/
 
 #include "math_experiments.h"
 #include <stdio.h>
